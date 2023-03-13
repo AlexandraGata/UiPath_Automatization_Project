@@ -1,0 +1,674 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1064,925.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="47">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart sap:VirtualizedContainerService.HintSize="900,820.8" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:String" Name="inputUnchecked" />
+      <Variable x:TypeArguments="x:String" Default="phone" Name="inputChecked" />
+      <Variable x:TypeArguments="x:Int32" Name="optionsValue" />
+      <Variable x:TypeArguments="x:String" Name="url" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.7 300,107.7 100,107.7 100,133.6</av:PointCollection>
+        <x:Double x:Key="Width">866.4</x:Double>
+        <x:Double x:Key="Height">784.4</x:Double>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID9</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID9">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">0,133.6</av:Point>
+          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">200,160 560,160</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart DisplayName="Extract" sap:VirtualizedContainerService.HintSize="633.6,636.8" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.7 300,107.7 100,107.7 100,126.04</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Flowchart.StartNode>
+          <x:Reference>__ReferenceID0</x:Reference>
+        </Flowchart.StartNode>
+        <FlowStep x:Name="__ReferenceID0">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">0,125.6</av:Point>
+              <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Type of Product" sap:VirtualizedContainerService.HintSize="1313.6,1584" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="1272,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="[&quot;Type in key words about the product that you want&quot;+Environment.NewLine+&quot;If not sure yet, click OK for recommendation.&quot;]" Title="Type of Product">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[inputUnchecked]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+            <If Condition="[String.IsNullOrEmpty(inputUnchecked)]" sap:VirtualizedContainerService.HintSize="1272,1209.6" sap2010:WorkflowViewState.IdRef="If_4">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="375.2,360" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="Random random = new Random();&#xA;int randomIndex = random.Next(0,commonProducts.Length);&#xA;inputChecked = commonProducts[randomIndex];" DisplayName="Private: Invoke code" sap:VirtualizedContainerService.HintSize="333.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
+                    <ui:InvokeCode.Arguments>
+                      <InArgument x:TypeArguments="s:String[]" x:Key="commonProducts">[{"camera", "phone", "tablet", "headphones", "mouse"}]</InArgument>
+                      <InOutArgument x:TypeArguments="x:String" x:Key="inputChecked">[inputChecked]</InOutArgument>
+                    </ui:InvokeCode.Arguments>
+                  </ui:InvokeCode>
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[inputChecked]" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <If Condition="[String.IsNullOrEmpty(inputUnchecked.Trim())]" sap:VirtualizedContainerService.HintSize="852.8,1060" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="375.2,360" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Random random = new Random();&#xA;int randomIndex = random.Next(0,commonProducts.Length);&#xA;inputChecked = commonProducts[randomIndex];" DisplayName="Private: Invoke code" sap:VirtualizedContainerService.HintSize="333.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_4" Language="CSharp">
+                        <ui:InvokeCode.Arguments>
+                          <InArgument x:TypeArguments="s:String[]" x:Key="commonProducts">[{"camera", "phone", "tablet", "headphones", "mouse"}]</InArgument>
+                          <InOutArgument x:TypeArguments="x:String" x:Key="inputChecked">[inputChecked]</InOutArgument>
+                        </ui:InvokeCode.Arguments>
+                      </ui:InvokeCode>
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[inputChecked]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Spell checker – grammar and spell check in English - Reverso" sap:VirtualizedContainerService.HintSize="433.6,910.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="Simulate" Version="V1">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,693.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NClick ClickType="Single" DelayBefore="5" DisplayName="Click 'Check'" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.reverso.net/spell-checker/english-spelling-grammar/#text=miiint" DesignTimeRectangle="1027, 684, 188, 60" ElementType="Button" FriendlyName="'Check'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='correct' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='correct' aaname=' Check ' check:text='Check' /&gt;" ImageBase64="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" InformativeScreenshot="12bd8db99838c723882fe116e6c71b02.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spell checker – grammar and spell check in English - Reverso' /&gt;" SearchSteps="FuzzySelector, Image" Text="Check" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='correct' /&gt;" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NGetText DelayBefore="5" DisplayName="Get Text 'Mint'" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NGetText_2">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.reverso.net/spell-checker/english-spelling-grammar/#text=miiint" DesignTimeRectangle="179, 428, 1010, 211" FriendlyName="'Mint'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-spellcheck&amp;gt;app-speller&amp;gt;app-speller-box&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ngx-speller&amp;gt;div&amp;gt;ngx-speller-corrected-text&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;app-spellcheck&amp;gt;app-speller&amp;gt;app-speller-box&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ngx-speller&amp;gt;div&amp;gt;ngx-speller-corrected-text&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' type='' aaname='' /&gt;" ImageBase64="" InformativeScreenshot="4dc5eb479ebb40a19e45b3d90ad103bf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spell checker – grammar and spell check in English - Reverso' /&gt;" SearchSteps="FuzzySelector" Text="Mint" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='DIV' type='' /&gt;" />
+                              </uix:NGetText.Target>
+                              <uix:NGetText.Text>
+                                <OutArgument x:TypeArguments="x:String">[inputChecked]</OutArgument>
+                              </uix:NGetText.Text>
+                            </uix:NGetText>
+                            <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="333.6,82.4" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_2" />
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[inputChecked]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp BrowserType="Chrome" IconBase64="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" InformativeScreenshot="e3191795c70c4093ecd3e427c5964698.png" Selector="&lt;html app='chrome.exe' title='Spell checker – grammar and spell check in English - Reverso'/&gt;" Url="[&quot;https://www.reverso.net/spell-checker/english-spelling-grammar/#text=&quot;+inputUnchecked.Trim().Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;,&quot;,&quot;%252C&quot;)]" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                  </If.Else>
+                </If>
+              </If.Else>
+            </If>
+          </Sequence>
+        </FlowStep>
+      </Flowchart>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">560,148.8</av:Point>
+              <av:Size x:Key="ShapeSize">200,22.4</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">660,171.2 660,201.2 360,201.2 360,243.6</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Delete ContinueOnError="{x:Null}" DisplayName="Delete Previous File" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Delete_1" Path="List_of_products.xlsx">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:Delete>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">260,243.6</av:Point>
+                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">360,296.4 360,336.4</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog - How many?" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="How many products to compare?" OptionsString="5;10;50" Title="Question amount">
+                <ui:InputDialog.Result>
+                  <OutArgument x:TypeArguments="x:Int32">[optionsValue]</OutArgument>
+                </ui:InputDialog.Result>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:InputDialog>
+              <FlowStep.Next>
+                <FlowSwitch x:TypeArguments="x:Int32" x:Name="__ReferenceID3" DisplayName="Flow Switch" Expression="[optionsValue]" sap:VirtualizedContainerService.HintSize="70.4,87.2" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+                  <FlowSwitch.Default>
+                    <FlowStep x:Name="__ReferenceID4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">30,346.04</av:Point>
+                          <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">130,414.84 130,650 260,650</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Search 5 products" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Open Browser and Search" sap:VirtualizedContainerService.HintSize="553.6,1658.4" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Electronics, Cars, Fashion, Collectibles &amp; More | eBay" sap:VirtualizedContainerService.HintSize="512,1565.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" InteractionMode="Simulate" Version="V1">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478.4,1348.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="sd:DataTable" Name="extractedDetailsDT" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="436.8,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[inputChecked]" />
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="2" DisplayName="Type Into 'INPUT  gh-ac'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="436.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="Simulate" Text="[inputChecked]">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://www.ebay.com/" DesignTimeRectangle="456, 198, 770, 48" ElementType="InputBox" FriendlyName="'INPUT  gh-ac'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Enter your search keyword' /&gt;" ImageBase64="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" InformativeScreenshot="2dec88e28806e563c1514e65478518e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;991a7707-2ca6-4419-ad5e-e873db482d2a&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;149d9b3b-8599-4aaf-a88c-518056f8635d&amp;quot;}' title='Electronics, Cars, Fashion, Collectibles &amp;amp; More | eBay' /&gt;" SearchSteps="FuzzySelector, Image">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="331, 193, 113, 54" ElementType="Button" FriendlyName="'Shop by category'" FullSelectorArgument="&lt;webctrl id='gh-shop-a' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='gh-shop-a' tag='BUTTON' type='' aaname='Shop by category' check:text='Shop by category' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" Text="Shop by category" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="436.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://www.ebay.com/" DesignTimeRectangle="1440, 196, 210, 53" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Search' check:text='Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANYAAAA5CAYAAABK8dV5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARiSURBVHhe7Zo/axtZFEf3U+Vz6Auk3CbVdluYdK7SBKPCRcAsQRCWTRHDsghCVCw2Ili4kBqBWRSChVgQBsso1oz+3L1v5l1ppMgKZq7wFucHB6x5b0Zi/I7ue2/0kxBC3INYhOwhiEXIHrIU69nPdwBQEgtiAThiQSwARyyIBeCIBbEAHLEgFoAjFsQCcMSCWACOWBALwBELYgE4YkEsAEcsiAXgiAWxAByxIBaAIxbEAnDEglgAjlgQC8ARC2IBOGJBLA+qiTS+LGSUxpsZki6k10nl5cGW/k9OKr3wGQfpljYogwWxylLVQRqFSu7m0rvOWUp2O5Oj/51ciLUvLIhVkuOr/P71zr5ttI21bZG19T9vtj01iLUvLIhVktNBuHtzOd3S9uz1VPqh+WtxAI/l5ceZ9MehIc/oZi712rjQ504qtal0bxaSzGMnTaiIxX5H3SDuXBpn87yf0vt8n7X9Up9Jb/V/zs49r5vgJtZUji+1utp7hOlrcyKVeH14PBbEKslhJ1aly4k839K+yVHsn9zqQG9Opd6ZyzCbNi7k4n2UphqF1IHe7Wgf7XdxrZJlx+ZSi1PLXCzNPKznptLozuT0N5UqiBaO2/nF9/g9nBvFCrE+LZU9Tl/bH1afFx6HBbHKcjCR85t4E/WbfzScy0UrlZO3377/5o8VLPmSrkt4kEh7og3/TuWFvj7UKpKoLLkEK/Jp5+q4iTW8LE4147UmMzkpru2CrOHzXSX62sTSalct9Pkwy4QcdSerY/AoLIjlwlgO/5pKe7g+dcsqiU6tTKJKM2/sX+VVqEj7Njth+5TS0EoU0v4zf52LtSHgu5mM9OhuOaJYKvK6/Ky9ymJBrD3wvDqRk6auceI6KgzyMICXU7cHo5K8K17nXo4/qXgdvVZB2t5Z3r5VrL/zTtZnOw8JhFhlsSDWPtFp4kWhEm0VYRvVVLqFzQ3RtU/Y4GgPcjF3ihWrGmI9DRbEKoNOu4Z675J/wrplS7vyx9dwd3OxXrTiVLC1a/t9HM9ZSPfT+oaInb9TrAengiq5/t+TwVR+Ray9YUGsUsSNAh3c7Y/3321WhC3zsGEQHhIfhmO2/T7eeGgcKluoUHr8JAgQ/z6y9qzPvTSCxZqdYj2weVF5XxQOsfaFBbFKYgM2S7qQfvzlRX95j3Xg2za6VqNcBk2qU7tWvn6yZ1r5Q+ax1LKKpdVlOJNG2NwI2+VBlrxg/UCswnb7OOxQ5udnz6r0PU9fhz6ItS8siOVA5U0q59cbvxXUgTwazKT2Zv3BbxDnVVNFKayhkiBAseJpBauH51ZRpEzYq1Re1eLUM9sy371m23xAPFJJa8utdcTaFxbEAnDEglgAjlgQC8ARC2IBOGJBLABHLIgF4IgFsQAcsSAWgCMWxAJwxIJYAI5YEAvAEQtiAThiQSwARyyIBeCIBbEAHLEgFoAjFsQCcMSCWACOWBALwBELYgE4YkEsAEcsS7EIIX5BLELcI/IfJK9YGb8sdD0AAAAASUVORK5CYII=" InformativeScreenshot="baba4610487f05072d5d969a76cc4098.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;5ed66e5c-fe75-4676-84f0-e38061f7240f&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;3dc12527-d46d-4b7c-9631-7d15c236b8d1&amp;quot;}' title='Electronics, Cars, Fashion, Collectibles &amp;amp; More | eBay' /&gt;" SearchSteps="FuzzySelector, Image" Text="Search" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='submit' /&gt;" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,398.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                    <TryCatch.Try>
+                                      <uix:NExtractData ContinueOnError="True" DataTable="[extractedDetailsDT]" DisplayName="Extract Table Data" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;/row&gt;&lt;column exact='1' name='Name' attr='text'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='h3' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Price' attr='text'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Link' attr='href'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='h3' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NExtractData_1" MaximumResults="5">
+                                        <uix:NExtractData.NextLink>
+                                          <uix:TargetAnchorable BrowserURL="https://www.ebay.com/sch/i.html?_from=R40&amp;_trksid=p2380057.m570.l1313&amp;_nkw=phone&amp;_sacat=0" DesignTimeRectangle="1043, 615, 50, 50" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl tag='A' type='next' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' type='next' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKeSURBVGhD7Zm/bhQxEId5BTq60ECXNEkFbwAFNOQZUtCkCBIUPAQSBR1SJN4iiuhB9Anvcf/P6FtpVt692T377PH5In7Srzit155vxx7bySP3QPUf7NCUHWy1Wrnlcunm87mbzWZuOp02nkwmjeU3z2hDW97JrSxgBLZYLJpgBSDWvEsfuSCTwAiCr64FmmL6TAXcCcwKqO8UwGgw1oS/ZqzNWIwZq2Cw9XpdJEtDZmxiCFUQ2L6hxDFwW8FqgRKHwo2C1QYlDoEbBasRSkxsYxoEoxJpHdbksWqpgrF3lCzpu5oYh/Y5FazmKdj30JTcAOMLaB3UbC1rG2CHlC2xlrUOmGW2bm5/Ntae5XA/ax0wrg3aS6m+u//rHj952vj79Q+1TaqJ3VcHLOU+NWbAjp4dm8IRu68WzLpo/Pr9xxzOn44tWIkN2RrO37BbsFLV0BLOr44tmNX60tyH+/Dps9ou1v46a8FKH6H6cBfvL9V2MYZBlA3sy9dv7vXb8yifnL1swfDVx7TMqWBawxj7AaZY6zvGomxgFIFXb95F+fj0RQcqRyER7XeNPc9bHU3WWIwtoLAKVqrcW0FhtdyX2KAtobC6QVsfqYCwhMLqkcryEOxfW6ygsHoIRlbrjCloDeWvL9QBs7poYuCw9iyHRy+a1ncyS/vTEHXAUKnrS0771VC0AXaIWetnC22AoUPKmpYtpILxBUqfHXcxMWrZQioYKvE3kFT7G3Jfg2Co5ik5NAVFo2AP9h9/qDa4ECi0FQzVAhcKhYLA0L7hYqBQMJiISlRyK2Csseo3pGgwxN5RInuMMbRPbdNOYCIrwBQgURKYiCC4NqTc53iXPlKBRFnAfBEYa4KvTrCsEX9Nym+e0Ya2uWB8ZQerQ879A+oMt08GPdAoAAAAAElFTkSuQmCC" InformativeScreenshot="5445d86dd5565ec08f975dc10347b07a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;ca5c2840-8daf-47d2-81a3-3297e2b0322c&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;605a4d7d-1b52-4574-a5da-f7839ab1dc12&amp;quot;}' title='phone: Search Result | eBay' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                        </uix:NExtractData.NextLink>
+                                        <uix:NExtractData.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="326, -22, 1141, 18949" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl parentid='srp-river-results' tag='UL' /&gt;" InformativeScreenshot="329dde99a2130efa3ba9600ffb72df56.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;ca5c2840-8daf-47d2-81a3-3297e2b0322c&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;605a4d7d-1b52-4574-a5da-f7839ab1dc12&amp;quot;}' title='phone: Search Result | eBay' /&gt;" SearchSteps="Selector" />
+                                        </uix:NExtractData.Target>
+                                      </uix:NExtractData>
+                                    </TryCatch.Try>
+                                    <TryCatch.Catches>
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ActivityAction x:TypeArguments="s:Exception">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                          </ActivityAction.Argument>
+                                        </ActivityAction>
+                                      </Catch>
+                                    </TryCatch.Catches>
+                                  </TryCatch>
+                                  <ui:WriteRange AddHeaders="False" DataTable="[extractedDetailsDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="436.8,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Sheet1" StartingCell="A1" WorkbookPath="List_of_products.xlsx" />
+                                  <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="436.8,82.4" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_3" />
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACiSURBVDhPY/j//z8GvnHjhlpQUNBaPj6+DyAMYoPEsKnFEAApFBMTe9HR0VH+7t07fhAGsUFi2AxB4YAwyDaQBnRxkBhIDl0chQPCICfv2LHDHV1827ZtHiA5dHEw8dTI4j8MM6RcQsFf1zOB8Zd1ELpthzgck2QADI8aMGoATgOee/g+JtWAyfsNHsMN+HHytDPMEGIMAGm+/+aQ4////xkADNiBBUd/4MwAAAAASUVORK5CYII=" InformativeScreenshot="f8414913d327dec28cce776d1276dc0e.png" Selector="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;991a7707-2ca6-4419-ad5e-e873db482d2a&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;149d9b3b-8599-4aaf-a88c-518056f8635d&amp;quot;}' title='Electronics, Cars, Fashion, Collectibles &amp;amp; More | eBay'/&gt;" Url="https://www.ebay.com/" />
+                            </uix:NApplicationCard.TargetApp>
+                          </uix:NApplicationCard>
+                        </Sequence>
+                      </Sequence>
+                      <FlowStep.Next>
+                        <x:Reference>__ReferenceID1</x:Reference>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowSwitch.Default>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <av:Point x:Key="ShapeLocation">324.8,336.4</av:Point>
+                      <av:Size x:Key="ShapeSize">70.4,87.2</av:Size>
+                      <av:PointCollection x:Key="Default">324.8,380 294.8,380 294.8,380.44 230,380.44</av:PointCollection>
+                      <av:PointCollection x:Key="50Connector">395.2,380 470,380</av:PointCollection>
+                      <av:PointCollection x:Key="10Connector">360,423.6 360,475.6</av:PointCollection>
+                      <x:String x:Key="DefaultCaseDisplayName">5</x:String>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <FlowStep x:Key="10" x:Name="__ReferenceID6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">260,475.6</av:Point>
+                        <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">360,544.4 360,615.6</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Search 10 products" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Open Browser and Search" sap:VirtualizedContainerService.HintSize="475.2,1427.2" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Electronics, Cars, Fashion, Collectibles &amp; More | eBay" sap:VirtualizedContainerService.HintSize="433.6,1334.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InteractionMode="Simulate" Version="V1">
+                          <uix:NApplicationCard.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,1117.6" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="sd:DataTable" Name="extractedDetailsDT" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[inputChecked]" />
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="2" DisplayName="Type Into 'INPUT  gh-ac'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="Simulate" Text="[inputChecked]">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://www.ebay.com/" DesignTimeRectangle="456, 198, 770, 48" ElementType="InputBox" FriendlyName="'INPUT  gh-ac'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Enter your search keyword' /&gt;" ImageBase64="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" InformativeScreenshot="2dec88e28806e563c1514e65478518e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;991a7707-2ca6-4419-ad5e-e873db482d2a&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;149d9b3b-8599-4aaf-a88c-518056f8635d&amp;quot;}' title='Electronics, Cars, Fashion, Collectibles &amp;amp; More | eBay' /&gt;" SearchSteps="FuzzySelector, Image">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="331, 193, 113, 54" ElementType="Button" FriendlyName="'Shop by category'" FullSelectorArgument="&lt;webctrl id='gh-shop-a' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='gh-shop-a' tag='BUTTON' type='' aaname='Shop by category' check:text='Shop by category' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" Text="Shop by category" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://www.ebay.com/" DesignTimeRectangle="1440, 196, 210, 53" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Search' check:text='Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANYAAAA5CAYAAABK8dV5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARiSURBVHhe7Zo/axtZFEf3U+Vz6Auk3CbVdluYdK7SBKPCRcAsQRCWTRHDsghCVCw2Ili4kBqBWRSChVgQBsso1oz+3L1v5l1ppMgKZq7wFucHB6x5b0Zi/I7ue2/0kxBC3INYhOwhiEXIHrIU69nPdwBQEgtiAThiQSwARyyIBeCIBbEAHLEgFoAjFsQCcMSCWACOWBALwBELYgE4YkEsAEcsiAXgiAWxAByxIBaAIxbEAnDEglgAjlgQC8ARC2IBOGJBLA+qiTS+LGSUxpsZki6k10nl5cGW/k9OKr3wGQfpljYogwWxylLVQRqFSu7m0rvOWUp2O5Oj/51ciLUvLIhVkuOr/P71zr5ttI21bZG19T9vtj01iLUvLIhVktNBuHtzOd3S9uz1VPqh+WtxAI/l5ceZ9MehIc/oZi712rjQ504qtal0bxaSzGMnTaiIxX5H3SDuXBpn87yf0vt8n7X9Up9Jb/V/zs49r5vgJtZUji+1utp7hOlrcyKVeH14PBbEKslhJ1aly4k839K+yVHsn9zqQG9Opd6ZyzCbNi7k4n2UphqF1IHe7Wgf7XdxrZJlx+ZSi1PLXCzNPKznptLozuT0N5UqiBaO2/nF9/g9nBvFCrE+LZU9Tl/bH1afFx6HBbHKcjCR85t4E/WbfzScy0UrlZO3377/5o8VLPmSrkt4kEh7og3/TuWFvj7UKpKoLLkEK/Jp5+q4iTW8LE4147UmMzkpru2CrOHzXSX62sTSalct9Pkwy4QcdSerY/AoLIjlwlgO/5pKe7g+dcsqiU6tTKJKM2/sX+VVqEj7Njth+5TS0EoU0v4zf52LtSHgu5mM9OhuOaJYKvK6/Ky9ymJBrD3wvDqRk6auceI6KgzyMICXU7cHo5K8K17nXo4/qXgdvVZB2t5Z3r5VrL/zTtZnOw8JhFhlsSDWPtFp4kWhEm0VYRvVVLqFzQ3RtU/Y4GgPcjF3ihWrGmI9DRbEKoNOu4Z675J/wrplS7vyx9dwd3OxXrTiVLC1a/t9HM9ZSPfT+oaInb9TrAengiq5/t+TwVR+Ray9YUGsUsSNAh3c7Y/3321WhC3zsGEQHhIfhmO2/T7eeGgcKluoUHr8JAgQ/z6y9qzPvTSCxZqdYj2weVF5XxQOsfaFBbFKYgM2S7qQfvzlRX95j3Xg2za6VqNcBk2qU7tWvn6yZ1r5Q+ax1LKKpdVlOJNG2NwI2+VBlrxg/UCswnb7OOxQ5udnz6r0PU9fhz6ItS8siOVA5U0q59cbvxXUgTwazKT2Zv3BbxDnVVNFKayhkiBAseJpBauH51ZRpEzYq1Re1eLUM9sy371m23xAPFJJa8utdcTaFxbEAnDEglgAjlgQC8ARC2IBOGJBLABHLIgF4IgFsQAcsSAWgCMWxAJwxIJYAI5YEAvAEQtiAThiQSwARyyIBeCIBbEAHLEgFoAjFsQCcMSCWACOWBALwBELYgE4YkEsAEcsS7EIIX5BLELcI/IfJK9YGb8sdD0AAAAASUVORK5CYII=" InformativeScreenshot="baba4610487f05072d5d969a76cc4098.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;5ed66e5c-fe75-4676-84f0-e38061f7240f&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;3dc12527-d46d-4b7c-9631-7d15c236b8d1&amp;quot;}' title='Electronics, Cars, Fashion, Collectibles &amp;amp; More | eBay' /&gt;" SearchSteps="FuzzySelector, Image" Text="Search" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='submit' /&gt;" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                                <uix:NExtractData ContinueOnError="True" DataTable="[extractedDetailsDT]" DisplayName="Extract Table Data" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;/row&gt;&lt;column exact='1' name='Name' attr='text'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='h3' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Price' attr='text'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Link' attr='href'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='h3' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NExtractData_4" MaximumResults="10">
+                                  <uix:NExtractData.NextLink>
+                                    <uix:TargetAnchorable BrowserURL="https://www.ebay.com/sch/i.html?_from=R40&amp;_trksid=p2380057.m570.l1313&amp;_nkw=phone&amp;_sacat=0" DesignTimeRectangle="1043, 648, 50, 50" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl tag='A' type='next' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' type='next' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAL4SURBVGhD7ZnLihNBFIZ9BXduRlw4K2ejK30A3bjyEVzMRlDQhb6CILgTBF9CZLaK6xlfIwkhV0IgJARKv4ZqKj2nL9VVp9LT+MMPIV196nype+WW6an+g900RQfbbrdmvV6b5XJpptOpGY/HZjQamcFgkJnPfMczylCWd2IrChiJrVYrM5lMcgBf8y4xYkEGgW02GzOfz81wOBSTbWNiEZPYIWoFxq+6WCyiAhVNbOpo24LeYIwJxoiUjIapizp91Rhsv99ng12qPIWpmxyaqhHYbrfL+r1UYUqTA7k0US0YgWazmVjRMUwuTeAqwWj6LrRU0eRU1y0rwY45pupMblUqBWMmkgJ2yVWzpQjG2pFySm9rcixb50QwFkYpUBdNrpKugbGV0dxRxDa5Stuva2BdnAXrTM5FHYDRX7Va6/uPi8zSs1CTc3GsHYBxbJBeDPXl1R9z+869zF++fhPLhJrcXR2AhZynqgzYyf0zVThyd5WD0ZTSC7H889dvdTi3O+ZgKRZkbTh3wc7BUm2fNOHcbVYOxuWKVFjDRbg37z6I5XwNg1UOlnoLVYR7ef5KLOdjGKxyMPeKrI0/fvpsnj1/4eWzR09yMPz67XsxdlPDYJWDSQV97CYYYim2j62igTEJPP3XCj5+8PDxAVSMicQqWlf0NWPs7mnc2VHsiiknDw0oLE4eqaZ7LSgsTvcpFmhNKCwu0NpbKiA0obC4pdLcBLvHFi0oLG6CkdaxhS6oDVV6bEFaB00MHJaexXDlQZOmvEkXOda1VwOol5c5qLfXb6iXF6aI/pr6fNbG5FgcW1YiGEpxBxJqd0EuqhQMpboHaWN3+ySpEqy3f/yhXv5Va0WgLrQcOTSBQo3AEE1/zDFH3XXdz1VjMCtmopRLAXVVzX5l8gZDrB0sjJo7FGJTR9k6VadWYFZsZej3MQGJRUxpm+SjIDArflWODSHnOd4lRtsWKioKmCsSY0ww2LlcYYy4V3t85jueUYaysWBcRQfrhoz5CzocLIFK7SRYAAAAAElFTkSuQmCC" InformativeScreenshot="5445d86dd5565ec08f975dc10347b07a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;ca5c2840-8daf-47d2-81a3-3297e2b0322c&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;605a4d7d-1b52-4574-a5da-f7839ab1dc12&amp;quot;}' title='phone: Search Result | eBay' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                  </uix:NExtractData.NextLink>
+                                  <uix:NExtractData.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="335, -24, 1141, 19418" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl parentid='srp-river-results' tag='UL' /&gt;" InformativeScreenshot="329dde99a2130efa3ba9600ffb72df56.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;ca5c2840-8daf-47d2-81a3-3297e2b0322c&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;605a4d7d-1b52-4574-a5da-f7839ab1dc12&amp;quot;}' title='phone: Search Result | eBay' /&gt;" SearchSteps="Selector" />
+                                  </uix:NExtractData.Target>
+                                </uix:NExtractData>
+                                <ui:WriteRange AddHeaders="False" DataTable="[extractedDetailsDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_8" SheetName="Sheet1" StartingCell="A1" WorkbookPath="List_of_products.xlsx" />
+                                <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="333.6,82.4" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_6" />
+                              </Sequence>
+                            </ActivityAction>
+                          </uix:NApplicationCard.Body>
+                          <uix:NApplicationCard.TargetApp>
+                            <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACiSURBVDhPY/j//z8GvnHjhlpQUNBaPj6+DyAMYoPEsKnFEAApFBMTe9HR0VH+7t07fhAGsUFi2AxB4YAwyDaQBnRxkBhIDl0chQPCICfv2LHDHV1827ZtHiA5dHEw8dTI4j8MM6RcQsFf1zOB8Zd1ELpthzgck2QADI8aMGoATgOee/g+JtWAyfsNHsMN+HHytDPMEGIMAGm+/+aQ4////xkADNiBBUd/4MwAAAAASUVORK5CYII=" InformativeScreenshot="f8414913d327dec28cce776d1276dc0e.png" Selector="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;991a7707-2ca6-4419-ad5e-e873db482d2a&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;149d9b3b-8599-4aaf-a88c-518056f8635d&amp;quot;}' title='Electronics, Cars, Fashion, Collectibles &amp;amp; More | eBay'/&gt;" Url="https://www.ebay.com/" />
+                          </uix:NApplicationCard.TargetApp>
+                        </uix:NApplicationCard>
+                      </Sequence>
+                    </Sequence>
+                    <FlowStep.Next>
+                      <FlowStep x:Name="__ReferenceID1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">260,615.6</av:Point>
+                            <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">360,684.4 360,740 430,740</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="linkBestProduct" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="alexandragata2000@gmail.com" DisplayName="Use Gmail" EmailAddress="alexandragata2000@gmail.com" sap:VirtualizedContainerService.HintSize="508.8,672" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+                            <umab:GmailApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,490.4" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,397.6" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Products wanted" To="alexandragata2000@gmail.com" UseDocumentAsBody="False">
+                                    <umab:SendMailX.Files>
+                                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                        <InArgument x:TypeArguments="x:String">List_of_products.xlsx</InArgument>
+                                      </scg:List>
+                                    </umab:SendMailX.Files>
+                                    <umab:SendMailX.HtmlBodyFromFile>
+                                      <umabh:HtmlContentArgument FilePath=".data/HtmlContent0.html">
+                                        <umabh:HtmlContentArgument.RuntimeImages>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </umabh:HtmlContentArgument.RuntimeImages>
+                                        <umabh:HtmlContentArgument.ValueMappings>
+                                          <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                        </umabh:HtmlContentArgument.ValueMappings>
+                                      </umabh:HtmlContentArgument>
+                                    </umab:SendMailX.HtmlBodyFromFile>
+                                  </umab:SendMailX>
+                                </Sequence>
+                              </ActivityAction>
+                            </umab:GmailApplicationCard.Body>
+                            <umab:GmailApplicationCard.ClientId>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </umab:GmailApplicationCard.ClientId>
+                            <umab:GmailApplicationCard.ClientSecret>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </umab:GmailApplicationCard.ClientSecret>
+                          </umab:GmailApplicationCard>
+                        </Sequence>
+                        <FlowStep.Next>
+                          <FlowStep x:Name="__ReferenceID8">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">430,705.6</av:Point>
+                                <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="Process email" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="alexandragata2000@gmail.com" DisplayName="Use Gmail" EmailAddress="alexandragata2000@gmail.com" sap:VirtualizedContainerService.HintSize="584,852.8" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_3" Timeout="90" UseConnectionService="False">
+                                <umab:GmailApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="550.4,671.2" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <umab:ForEachEmailX DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="508.8,578.4" sap2010:WorkflowViewState.IdRef="ForEachEmailX_2" IncludeSubfolders="False" Mails="[Gmail.Folder(&quot;Inbox&quot;)]" NumberOfEmailsLimit="5" UnreadOnly="True" WithAttachmentsOnly="True">
+                                        <umab:ForEachEmailX.Body>
+                                          <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
+                                            <ActivityAction.Argument1>
+                                              <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="CurrentMail" />
+                                            </ActivityAction.Argument1>
+                                            <ActivityAction.Argument2>
+                                              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                            </ActivityAction.Argument2>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,322.4" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <umab:SaveMailAttachmentsX Attachments="{x:Null}" DisplayName="Save Email Attachments" ExcludeInlineAttachments="True" Filter="*.xlsx" FolderPath="C:\Users\alexa\Downloads" sap:VirtualizedContainerService.HintSize="433.6,229.6" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_2" Message="[CurrentMail]" OverwriteExisting="False" />
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </umab:ForEachEmailX.Body>
+                                        <umab:ForEachEmailX.MailFilter>
+                                          <umabf:MailFilterArgument LogicalOperator="And">
+                                            <umabf:MailFilterArgument.Filters>
+                                              <scg:List x:TypeArguments="umabf:SingleMailFilterArgument" Capacity="0" />
+                                            </umabf:MailFilterArgument.Filters>
+                                          </umabf:MailFilterArgument>
+                                        </umab:ForEachEmailX.MailFilter>
+                                      </umab:ForEachEmailX>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </umab:GmailApplicationCard.Body>
+                                <umab:GmailApplicationCard.ClientId>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <Literal x:TypeArguments="x:String" Value="" />
+                                  </InArgument>
+                                </umab:GmailApplicationCard.ClientId>
+                                <umab:GmailApplicationCard.ClientSecret>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <Literal x:TypeArguments="x:String" Value="" />
+                                  </InArgument>
+                                </umab:GmailApplicationCard.ClientSecret>
+                              </umab:GmailApplicationCard>
+                            </Sequence>
+                          </FlowStep>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowStep.Next>
+                  </FlowStep>
+                  <FlowStep x:Key="50" x:Name="__ReferenceID5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">470,345.6</av:Point>
+                        <av:Size x:Key="ShapeSize">200,68.8</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">570,414.4 570,650 460,650</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Search 50 products" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Table Extraction" sap:VirtualizedContainerService.HintSize="516.8,1520" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Open Browser and Search" sap:VirtualizedContainerService.HintSize="475.2,1427.2" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Electronics, Cars, Fashion, Collectibles &amp; More | eBay" sap:VirtualizedContainerService.HintSize="433.6,1334.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" InteractionMode="Simulate" Version="V1">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,1117.6" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="sd:DataTable" Name="extractedDetailsDT" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[inputChecked]" />
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DelayBefore="2" DisplayName="Type Into 'INPUT  gh-ac'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,228" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="Simulate" Text="[inputChecked]">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://www.ebay.com/" DesignTimeRectangle="456, 198, 770, 48" ElementType="InputBox" FriendlyName="'INPUT  gh-ac'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='Enter your search keyword' /&gt;" ImageBase64="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" InformativeScreenshot="2dec88e28806e563c1514e65478518e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;991a7707-2ca6-4419-ad5e-e873db482d2a&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;149d9b3b-8599-4aaf-a88c-518056f8635d&amp;quot;}' title='Electronics, Cars, Fashion, Collectibles &amp;amp; More | eBay' /&gt;" SearchSteps="FuzzySelector, Image">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="331, 193, 113, 54" ElementType="Button" FriendlyName="'Shop by category'" FullSelectorArgument="&lt;webctrl id='gh-shop-a' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='gh-shop-a' tag='BUTTON' type='' aaname='Shop by category' check:text='Shop by category' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" Text="Shop by category" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                  </uix:NTypeInto>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://www.ebay.com/" DesignTimeRectangle="1440, 196, 210, 53" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Search' check:text='Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANYAAAA5CAYAAABK8dV5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARiSURBVHhe7Zo/axtZFEf3U+Vz6Auk3CbVdluYdK7SBKPCRcAsQRCWTRHDsghCVCw2Ili4kBqBWRSChVgQBsso1oz+3L1v5l1ppMgKZq7wFucHB6x5b0Zi/I7ue2/0kxBC3INYhOwhiEXIHrIU69nPdwBQEgtiAThiQSwARyyIBeCIBbEAHLEgFoAjFsQCcMSCWACOWBALwBELYgE4YkEsAEcsiAXgiAWxAByxIBaAIxbEAnDEglgAjlgQC8ARC2IBOGJBLA+qiTS+LGSUxpsZki6k10nl5cGW/k9OKr3wGQfpljYogwWxylLVQRqFSu7m0rvOWUp2O5Oj/51ciLUvLIhVkuOr/P71zr5ttI21bZG19T9vtj01iLUvLIhVktNBuHtzOd3S9uz1VPqh+WtxAI/l5ceZ9MehIc/oZi712rjQ504qtal0bxaSzGMnTaiIxX5H3SDuXBpn87yf0vt8n7X9Up9Jb/V/zs49r5vgJtZUji+1utp7hOlrcyKVeH14PBbEKslhJ1aly4k839K+yVHsn9zqQG9Opd6ZyzCbNi7k4n2UphqF1IHe7Wgf7XdxrZJlx+ZSi1PLXCzNPKznptLozuT0N5UqiBaO2/nF9/g9nBvFCrE+LZU9Tl/bH1afFx6HBbHKcjCR85t4E/WbfzScy0UrlZO3377/5o8VLPmSrkt4kEh7og3/TuWFvj7UKpKoLLkEK/Jp5+q4iTW8LE4147UmMzkpru2CrOHzXSX62sTSalct9Pkwy4QcdSerY/AoLIjlwlgO/5pKe7g+dcsqiU6tTKJKM2/sX+VVqEj7Njth+5TS0EoU0v4zf52LtSHgu5mM9OhuOaJYKvK6/Ky9ymJBrD3wvDqRk6auceI6KgzyMICXU7cHo5K8K17nXo4/qXgdvVZB2t5Z3r5VrL/zTtZnOw8JhFhlsSDWPtFp4kWhEm0VYRvVVLqFzQ3RtU/Y4GgPcjF3ihWrGmI9DRbEKoNOu4Z675J/wrplS7vyx9dwd3OxXrTiVLC1a/t9HM9ZSPfT+oaInb9TrAengiq5/t+TwVR+Ray9YUGsUsSNAh3c7Y/3321WhC3zsGEQHhIfhmO2/T7eeGgcKluoUHr8JAgQ/z6y9qzPvTSCxZqdYj2weVF5XxQOsfaFBbFKYgM2S7qQfvzlRX95j3Xg2za6VqNcBk2qU7tWvn6yZ1r5Q+ax1LKKpdVlOJNG2NwI2+VBlrxg/UCswnb7OOxQ5udnz6r0PU9fhz6ItS8siOVA5U0q59cbvxXUgTwazKT2Zv3BbxDnVVNFKayhkiBAseJpBauH51ZRpEzYq1Re1eLUM9sy371m23xAPFJJa8utdcTaFxbEAnDEglgAjlgQC8ARC2IBOGJBLABHLIgF4IgFsQAcsSAWgCMWxAJwxIJYAI5YEAvAEQtiAThiQSwARyyIBeCIBbEAHLEgFoAjFsQCcMSCWACOWBALwBELYgE4YkEsAEcsS7EIIX5BLELcI/IfJK9YGb8sdD0AAAAASUVORK5CYII=" InformativeScreenshot="baba4610487f05072d5d969a76cc4098.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;5ed66e5c-fe75-4676-84f0-e38061f7240f&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;3dc12527-d46d-4b7c-9631-7d15c236b8d1&amp;quot;}' title='Electronics, Cars, Fashion, Collectibles &amp;amp; More | eBay' /&gt;" SearchSteps="FuzzySelector, Image" Text="Search" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='submit' /&gt;" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NExtractData ContinueOnError="True" DataTable="[extractedDetailsDT]" DisplayName="Extract Table Data" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;/row&gt;&lt;column exact='1' name='Name' attr='text'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='h3' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Price' attr='text'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='div'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Link' attr='href'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='2'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='h3' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NExtractData_2" MaximumResults="50">
+                                    <uix:NExtractData.NextLink>
+                                      <uix:TargetAnchorable BrowserURL="https://www.ebay.com/sch/i.html?_from=R40&amp;_trksid=p2380057.m570.l1313&amp;_nkw=phone&amp;_sacat=0" DesignTimeRectangle="1043, 740, 50, 50" FriendlyName="'A'" FullSelectorArgument="&lt;webctrl tag='A' type='next' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' type='next' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKeSURBVGhD7Zm/bhQxEId5BTq60ECXNEkFbwAFNOQZUtCkCBIUPAQSBR1SJN4iiuhB9Anvcf/P6FtpVt692T377PH5In7Srzit155vxx7bySP3QPUf7NCUHWy1Wrnlcunm87mbzWZuOp02nkwmjeU3z2hDW97JrSxgBLZYLJpgBSDWvEsfuSCTwAiCr64FmmL6TAXcCcwKqO8UwGgw1oS/ZqzNWIwZq2Cw9XpdJEtDZmxiCFUQ2L6hxDFwW8FqgRKHwo2C1QYlDoEbBasRSkxsYxoEoxJpHdbksWqpgrF3lCzpu5oYh/Y5FazmKdj30JTcAOMLaB3UbC1rG2CHlC2xlrUOmGW2bm5/Ntae5XA/ax0wrg3aS6m+u//rHj952vj79Q+1TaqJ3VcHLOU+NWbAjp4dm8IRu68WzLpo/Pr9xxzOn44tWIkN2RrO37BbsFLV0BLOr44tmNX60tyH+/Dps9ou1v46a8FKH6H6cBfvL9V2MYZBlA3sy9dv7vXb8yifnL1swfDVx7TMqWBawxj7AaZY6zvGomxgFIFXb95F+fj0RQcqRyER7XeNPc9bHU3WWIwtoLAKVqrcW0FhtdyX2KAtobC6QVsfqYCwhMLqkcryEOxfW6ygsHoIRlbrjCloDeWvL9QBs7poYuCw9iyHRy+a1ncyS/vTEHXAUKnrS0771VC0AXaIWetnC22AoUPKmpYtpILxBUqfHXcxMWrZQioYKvE3kFT7G3Jfg2Co5ik5NAVFo2AP9h9/qDa4ECi0FQzVAhcKhYLA0L7hYqBQMJiISlRyK2Csseo3pGgwxN5RInuMMbRPbdNOYCIrwBQgURKYiCC4NqTc53iXPlKBRFnAfBEYa4KvTrCsEX9Nym+e0Ya2uWB8ZQerQ879A+oMt08GPdAoAAAAAElFTkSuQmCC" InformativeScreenshot="5445d86dd5565ec08f975dc10347b07a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;ca5c2840-8daf-47d2-81a3-3297e2b0322c&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;605a4d7d-1b52-4574-a5da-f7839ab1dc12&amp;quot;}' title='phone: Search Result | eBay' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                    </uix:NExtractData.NextLink>
+                                    <uix:NExtractData.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="335, -103, 1141, 19418" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl parentid='srp-river-results' tag='UL' /&gt;" InformativeScreenshot="329dde99a2130efa3ba9600ffb72df56.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;ca5c2840-8daf-47d2-81a3-3297e2b0322c&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;605a4d7d-1b52-4574-a5da-f7839ab1dc12&amp;quot;}' title='phone: Search Result | eBay' /&gt;" SearchSteps="Selector" />
+                                    </uix:NExtractData.Target>
+                                  </uix:NExtractData>
+                                  <ui:WriteRange AddHeaders="False" DataTable="[extractedDetailsDT]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="Sheet1" StartingCell="A1" WorkbookPath="List_of_products.xlsx" />
+                                  <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="333.6,82.4" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_4" />
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACiSURBVDhPY/j//z8GvnHjhlpQUNBaPj6+DyAMYoPEsKnFEAApFBMTe9HR0VH+7t07fhAGsUFi2AxB4YAwyDaQBnRxkBhIDl0chQPCICfv2LHDHV1827ZtHiA5dHEw8dTI4j8MM6RcQsFf1zOB8Zd1ELpthzgck2QADI8aMGoATgOee/g+JtWAyfsNHsMN+HHytDPMEGIMAGm+/+aQ4////xkADNiBBUd/4MwAAAAASUVORK5CYII=" InformativeScreenshot="f8414913d327dec28cce776d1276dc0e.png" Selector="&lt;html app='chrome.exe' htmlwindowname='9527ebay#{&amp;quot;parentId&amp;quot;:&amp;quot;991a7707-2ca6-4419-ad5e-e873db482d2a&amp;quot;,&amp;quot;screenId&amp;quot;:&amp;quot;149d9b3b-8599-4aaf-a88c-518056f8635d&amp;quot;}' title='Electronics, Cars, Fashion, Collectibles &amp;amp; More | eBay'/&gt;" Url="https://www.ebay.com/" />
+                            </uix:NApplicationCard.TargetApp>
+                          </uix:NApplicationCard>
+                        </Sequence>
+                      </Sequence>
+                    </Sequence>
+                    <FlowStep.Next>
+                      <x:Reference>__ReferenceID1</x:Reference>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowSwitch>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+  </Flowchart>
+</Activity>

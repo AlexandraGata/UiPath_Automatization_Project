@@ -1,0 +1,65 @@
+{
+  "name": "ProiectFinal",
+  "description": "Blank Process",
+  "main": "Main.xaml",
+  "dependencies": {
+    "Google.Apis.Gmail.v1": "[1.55.0.2510]",
+    "Microsoft.CodeAnalysis.Common": "[4.1.0]",
+    "Microsoft.CodeAnalysis.CSharp": "[4.1.0]",
+    "Microsoft.CodeAnalysis.CSharp.Scripting": "[4.1.0]",
+    "Microsoft.CodeAnalysis.CSharp.Workspaces": "[4.1.0]",
+    "Microsoft.CodeAnalysis.Scripting.Common": "[4.1.0]",
+    "Microsoft.CodeAnalysis.VisualBasic": "[4.1.0]",
+    "Microsoft.CSharp": "[4.7.0]",
+    "System.Text.Encodings.Web": "[6.0.0]",
+    "UiPath.Excel.Activities": "[2.9.5]",
+    "UiPath.Mail.Activities": "[1.15.1]",
+    "UiPath.PDF.Activities": "[3.6.0]",
+    "UiPath.System.Activities": "[20.10.4]",
+    "UiPath.UIAutomation.Activities": "[20.10.9]",
+    "UiPath.Word.Activities": "[1.10.1]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "20.10.7.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "dffa607b-de75-4ea7-b960-15c03334c911",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {}
+}
